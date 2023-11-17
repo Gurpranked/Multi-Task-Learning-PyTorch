@@ -9,7 +9,10 @@
 import torch
 import collections
 import re
-from torch._six import string_classes, int_classes
+
+string_classes = (str, bytes)
+int_classes = (int, bool)
+
 
 _use_shared_memory = False
 r"""Whether to use shared memory in default_collate"""
